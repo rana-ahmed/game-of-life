@@ -2,7 +2,8 @@ from .utils import string_to_array, get_neighbours_status, will_alive
 
 
 def get_game_result(grid, ages):
-    results = {}
+    results = dict()
+    results['0'] = grid.data
     for age in ages:
         for i in range(1, age+1):
             data = results.get(str(i), grid.data)
