@@ -12,7 +12,10 @@ def get_game_result(grid, ages):
                 array = data
             for x in range(grid.x):
                 for y in range(grid.y):
-                    neighbors_status = get_neighbours_status(x, y, array)
+                    print('coordinate :', x, y)
+                    neighbors_status = get_neighbours_status(x, y, grid.x, grid.y, array)
+                    print('neighbors_status: ', neighbors_status)
                     array[x][y] = will_alive(array[x][y], neighbors_status)
+                    print('will_alive: ', array[x][y])
             results[str(i)] = array
     return results

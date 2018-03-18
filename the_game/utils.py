@@ -1,9 +1,7 @@
 def will_alive(current_status, neighbours_status):
     living_cell = neighbours_status.count('1')
-
     if current_status == '1' and living_cell < 2:
         return '0'
-
     elif current_status == '1' and (living_cell == 2 or living_cell == 3):
         return '1'
     elif current_status == '1' and living_cell > 3:
@@ -11,50 +9,27 @@ def will_alive(current_status, neighbours_status):
     elif current_status == '0' and living_cell == 3:
         return '1'
     else:
-        return '1'
+        return current_status
 
 
-def get_neighbours_status(x, y, data):
+def get_neighbours_status(x, y, xmax, ymax, data):
     status = []
-    try:
+    if not y-1 < 0:
         status.append(data[x][y-1])
-    except:
-        pass
-
-    try:
+    if not y+1 >= ymax:
         status.append(data[x][y + 1])
-    except:
-        pass
-
-    try:
+    if not x-1 < 0:
         status.append(data[x-1][y])
-    except:
-        pass
-
-    try:
+    if not x+1 >= xmax:
         status.append(data[x+1][y])
-    except:
-        pass
-
-    try:
+    if not (x-1 < 0 or y-1 < 0):
         status.append(data[x-1][y-1])
-    except:
-        pass
-
-    try:
+    if not (x-1 < 0 or y+1 >= ymax):
         status.append(data[x-1][y+1])
-    except:
-        pass
-
-    try:
+    if not (x+1 >= xmax or y-1 < 0):
         status.append(data[x+1][y-1])
-    except:
-        pass
-
-    try:
+    if not (x+1 >= xmax or y+1 >= ymax):
         status.append(data[x+1][y+1])
-    except:
-        pass
 
     return status
 
