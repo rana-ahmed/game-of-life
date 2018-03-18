@@ -1,0 +1,134 @@
+{
+	"id": "3af2bf01-c2bf-5069-c0eb-5029c7603408",
+	"name": "game_of_life",
+	"description": "",
+	"order": [
+		"3bc5b66f-e957-1553-1bb6-6a79afa9e368",
+		"ce655a86-5563-7099-4cae-dec3ed520230",
+		"decd64ef-4cfe-96a1-6ba7-52c806debaf6",
+		"1af6eb60-3f26-44de-1c18-c9795a2ac985"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1521365566517,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "1af6eb60-3f26-44de-1c18-c9795a2ac985",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "127.0.0.1:8000/grids/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PATCH",
+			"collectionId": "3af2bf01-c2bf-5069-c0eb-5029c7603408",
+			"data": [],
+			"dataMode": "raw",
+			"name": "127.0.0.1:8000/grids/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1521365604615,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"x\":5,\n\t\"y\":5,\n\t\"data\":\"0,0,1,1,0,1,1,0,1,0,0,0,1,0,0,0,0,0,1,0,0,1,1,0,0\"\n}"
+		},
+		{
+			"id": "3bc5b66f-e957-1553-1bb6-6a79afa9e368",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "127.0.0.1:8000/grids",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "3af2bf01-c2bf-5069-c0eb-5029c7603408",
+			"data": [],
+			"dataMode": "raw",
+			"name": "127.0.0.1:8000/grids",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1521365576534,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"x\":5,\n\t\"y\":5,\n\t\"data\":\"0,0,1,1,0,1,1,0,1,0,0,0,1,0,0,0,0,0,1,0,0,1,1,0,1\"\n}"
+		},
+		{
+			"id": "ce655a86-5563-7099-4cae-dec3ed520230",
+			"headers": "",
+			"headerData": [],
+			"url": "127.0.0.1:8000/grids/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "3af2bf01-c2bf-5069-c0eb-5029c7603408",
+			"data": null,
+			"dataMode": "params",
+			"name": "127.0.0.1:8000/grids/1",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1521365583980,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "decd64ef-4cfe-96a1-6ba7-52c806debaf6",
+			"headers": "",
+			"headerData": [],
+			"url": "127.0.0.1:8000/grids/1?after=20,19",
+			"queryParams": [
+				{
+					"key": "after",
+					"value": "20,19",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "3af2bf01-c2bf-5069-c0eb-5029c7603408",
+			"data": null,
+			"dataMode": "params",
+			"name": "127.0.0.1:8000/grids/1?after=20,19",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1521365595052,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
