@@ -33,11 +33,12 @@ def grid_get_update_oparate(request, id):
     elif request.method == 'GET' and not request.GET.get('after', None):
         serializer = GameSerializer(grid)
         return Response(serializer.data)
+
     elif request.method == 'GET' and request.GET.get('after'):
         try:
             ages = list(map(lambda x: int(x), request.GET.get('after').split(',')))
             ages_str = request.GET.get('after').split(',')
-        except:
+        except ValueError:
             return Response({'message': 'Invalid data'}, status=status.HTTP_400_BAD_REQUEST)
         results = get_game_result(grid, ages)
 
